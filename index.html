@@ -16,121 +16,179 @@
         <p>Discover tasty dishes and share them!</p>
     </header>
     <nav>
+      <div class="nav-left">
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Popular</a></li>
-            <li><a href="#">Recently Added</a></li>
-            <li><a href="#">All Recipes</a></li>
+            <li><a href="#popular-recipes">Popular</a></li>
+            <li><a href="#recently-added">Recently Added</a></li>
+            <li><a href="#all-recipes">All Recipes</a></li>
         </ul>
+      </div>
+    <div class="nav-right">
     <div class="search-bar">
-        <input type="text" placeholder="Search recipes..." />
+        <input type="search" placeholder="Search recipes..." />
     </div>
-    <button id="lang-toggle">TR 🇹🇷</button>
+      <button onclick="window.location.href='pages/index-tr.html'">TR 🇹🇷</button>
+    </div>
     </nav>
     <section id="popular-recipes">
-        <h2>Popular Recipes</h2>
-        <div class="scroll-container">
-            <article class="recipe-card">
-                <img src="images/placeholder.jpg" alt="Chocolate Cake Recipe Image"/>
-                <h3>Chocolate Cake</h3>
-                <p>Rich and moist chocolate cake recipe</p>
-            </article>
+    <h2 class="subhead">Popular Recipes</h2>
+    <div class="scroll-container">
+      <article class="recipe-card">
+        <img src="images/chocolatecake.png" alt="Chocolate Cake Recipe Image"/>
+        <h3>Chocolate Cake</h3>
+        <p>Rich and moist chocolate cake recipe</p>
+    </article>
 
-            <article class="recipe-card">
-                <img src="images/placeholder.jpg" alt="Spaghetti Bolognese Image"/>
-                <h3>Spaghetti Bolognese</h3>
-                <p>Classic Italian paste with meat sauce</p>
-            </article>
+    <article class="recipe-card">
+        <img src="images/spaghettibolognese.png" alt="Spaghetti Bolognese Image"/>
+        <h3>Spaghetti Bolognese</h3>
+        <p>Classic Italian paste with meat sauce</p>
+    </article>
 
-            <article class="recipe-card">
-                <img src="images/placeholder.jpg" alt="Chicken Curry Image"/>
-                <h3>Chicken Curry</h3>
-                <p>Flavorful and spicy curry with rice.</p>
-            </article>
-        </div>
+        <article class="recipe-card">
+        <img src="images/chocolatebrownies.png" alt="Chocolate Brownies Image" />
+        <h3>Chocolate Brownies</h3>
+        <p>Fudgy and chewy chocolate dessert squares.</p>
+    </article>
+
+    <article class="recipe-card">
+        <img src="images/turkishwhitebeanstew.png" alt="Turkish White Bean Stew Image" />
+        <h3>Turkish White Bean Stew</h3>
+        <p>Hearty and comforting stew made with white beans and tomato paste.</p>
+    </article>
+
+    <article class="recipe-card">
+        <img src="images/fluffypancakes.png" alt="Fluffy Pancakes Image" />
+        <h3>Fluffy Pancakes</h3>
+        <p>Golden, soft pancakes perfect for breakfast.</p>
+    </article>
+
+    <article class="recipe-card">
+      <img src="images/chickencurry.png" alt="Chicken Curry Image"/>
+      <h3>Chicken Curry</h3>
+      <p>Flavorful and spicy curry with rice.</p>
+    </article>
+    </div>
     </section>
     <section id="recently-added">
-        <h2>Recently Added</h2>
-        <div class="scroll-container">
-            <article class="recipe-card">
-                <img src="images/placeholder.jpg" alt="Summer Salad Image"/>
-                <h3>Summer Salad</h3>
-                <p>Fresh greens with a tangy lemon dressing.</p> 
-            </article>
+  <h2 class="subhead">Recently Added</h2>
+  <div class="scroll-container">
+    <article class="recipe-card">
+      <img src="images/summersalad.png" alt="Summer Salad Image"/>
+      <h3>Summer Salad</h3>
+      <p>Fresh greens with a tangy lemon dressing.</p> 
+    </article>
 
-            <article class="recipe-card">
-                <img src="images/placeholder.jpg" alt="Berry Smoothie Bowl Image"/>
-                <h3>Berry Smoothie Bowl</h3>
-                <p>Colorful and healthy breakfast bowl.</p>
-            </article>
+    <article class="recipe-card">
+      <img src="images/berrysmoothiebowl.png" alt="Berry Smoothie Bowl Image"/>
+      <h3>Berry Smoothie Bowl</h3>
+      <p>Colorful and healthy breakfast bowl.</p>
+    </article>
 
-            <article class="recipe-card">
-                <img src="images/placeholder.jpg" alt="Zucchini Fritters Image"/>
-                <h3>Zucchini Fritters</h3>
-                <p>Golden crispy fritters made with fresh zucchini.</p>
-            </article>
-        </div>
+    <article class="recipe-card">
+      <img src="images/zucchinifritters.png" alt="Zucchini Fritters Image"/>
+      <h3>Zucchini Fritters</h3>
+      <p>Golden crispy fritters made with fresh zucchini.</p>
+    </article>
+  </div>
     </section>
         <section id="all-recipes">
-  <h2>All Recipes</h2>
+  <h2 class="subhead">All Recipes</h2>
+
   <div class="grid-container">
     <article class="recipe-card">
-      <img src="images/placeholder.jpg" alt="Lasagna Image" />
+        <img src="images/chocolatecake.png" alt="Chocolate Cake Recipe Image"/>
+        <h3>Chocolate Cake</h3>
+        <p>Rich and moist chocolate cake recipe</p>
+    </article>
+
+    <article class="recipe-card">
+        <img src="images/spaghettibolognese.png" alt="Spaghetti Bolognese Image"/>
+        <h3>Spaghetti Bolognese</h3>
+        <p>Classic Italian paste with meat sauce</p>
+    </article>
+
+    <article class="recipe-card">
+      <img src="images/classiclasagna.png" alt="Classic Lasagna Image" />
       <h3>Classic Lasagna</h3>
       <p>Layers of pasta, meat sauce, béchamel, and cheese.</p>
     </article>
 
     <article class="recipe-card">
-      <img src="images/placeholder.jpg" alt="Pancakes Image" />
+      <img src="images/fluffypancakes.png" alt="Fluffy Pancakes Image" />
       <h3>Fluffy Pancakes</h3>
       <p>Golden, soft pancakes perfect for breakfast.</p>
     </article>
 
     <article class="recipe-card">
-      <img src="images/placeholder.jpg" alt="Tiramisu Image" />
+      <img src="images/italiantiramisu.png" alt="Tiramisu Image" />
       <h3>Italian Tiramisu</h3>
       <p>Creamy coffee-flavored dessert with ladyfingers.</p>
     </article>
 
     <article class="recipe-card">
-      <img src="images/placeholder.jpg" alt="Chicken Alfredo Image" />
+      <img src="images/chickenalfredo.png" alt="Chicken Alfredo Image" />
       <h3>Chicken Alfredo</h3>
       <p>Pasta tossed in rich, creamy Alfredo sauce.</p>
     </article>
 
     <article class="recipe-card">
-      <img src="images/placeholder.jpg" alt="Avocado Toast Image" />
+      <img src="images/avocadotoast.png" alt="Avocado Toast Image" />
       <h3>Avocado Toast</h3>
       <p>Toasted bread with smashed avocado and toppings.</p>
     </article>
 
     <article class="recipe-card">
-      <img src="images/placeholder.jpg" alt="Chocolate Brownies Image" />
+      <img src="images/chocolatebrownies.png" alt="Chocolate Brownies Image" />
       <h3>Chocolate Brownies</h3>
       <p>Fudgy and chewy chocolate dessert squares.</p>
     </article>
 
     <article class="recipe-card">
-      <img src="images/placeholder.jpg" alt="Turkish White Bean Stew Image" />
+      <img src="images/turkishwhitebeanstew.png" alt="Turkish White Bean Stew Image" />
       <h3>Turkish White Bean Stew</h3>
       <p>Hearty and comforting stew made with white beans and tomato paste.</p>
     </article>
+
+    <article class="recipe-card">
+        <img src="images/summersalad.png" alt="Summer Salad Image"/>
+        <h3>Summer Salad</h3>
+        <p>Fresh greens with a tangy lemon dressing.</p> 
+    </article>
+
+    <article class="recipe-card">
+        <img src="images/berrysmoothiebowl.png" alt="Berry Smoothie Bowl Image"/>
+        <h3>Berry Smoothie Bowl</h3>
+        <p>Colorful and healthy breakfast bowl.</p>
+    </article>
+
+    <article class="recipe-card">
+        <img src="images/zucchinifritters.png" alt="Zucchini Fritters Image"/>
+        <h3>Zucchini Fritters</h3>
+        <p>Golden crispy fritters made with fresh zucchini.</p>
+    </article>
+    <article class="recipe-card">
+      <img src="images/chickencurry.png" alt="Chicken Curry Image"/>
+      <h3>Chicken Curry</h3>
+      <p>Flavorful and spicy curry with rice.</p>
+ 
   </div>
 </section>
 <footer>
   <div class="footer-links">
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="#">Privacy Policy</a>
-  </div>
-  <div class="footer-copy">
-    <p>© 2025 SweetieBirdX. All rights reserved.</p>
+    <a href="pages/about.html" target="_blank">About</a>
+    <a href="pages/privacy.html" target="_blank">Privacy Policy</a>
   </div>
   <div class="footer-social">
-    <a href="https://github.com/SweetieBirdX" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/eyupefekarakoca/" target="_blank">LinkedIn</a>
-    <a href="https://x.com/EyupEfeKrkc" target="_blank">X</a>
+    <a href="https://github.com/SweetieBirdX" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://x.com/EyupEfeKrkc" target="_blank" rel="noopener noreferrer">X</a>
+    <a href="https://www.linkedin.com/in/eyupefekarakoca/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+  <div class="footer-copy">
+    <p>© 2025 SweetieBirdX. All rights reserved. Except maybe the recipes. Share them anyway.</p>
   </div>
 </footer>
+<script src="scripts/main.js"></script>
 </body>
 </html>
