@@ -1,9 +1,14 @@
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
   background-color: #f0eacc;
   color: #3e2f1c;
+  line-height: 1.6;
 }
 
 html {
@@ -21,29 +26,6 @@ mark {
   border-radius: 3px;
 }
 
-#lang-toggle {
-  background-color: #f5e9cc;
-  color: #4b3c2d;
-  border: 1px solid #d8cbb1;
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-}
-
-#lang-toggle:hover {
-  background-color: #e8dbb8;
-  transform: scale(1.03);
-}
-
-#lang-toggle:active {
-  transform: scale(0.98);
-  background-color: #e0d0a4;
-}
-
 header {
   text-align: center;
   padding: 2rem 1rem;
@@ -51,8 +33,8 @@ header {
 }
 
 header h1 {
-  margin: 0;
   font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 header p {
@@ -95,6 +77,7 @@ nav ul li a {
   color: #5a4b2f;
   font-weight: bold;
   font-size: 1.3rem;
+  transition: color 0.2s ease;
 }
 
 nav ul li a:hover {
@@ -105,28 +88,36 @@ nav ul li a:hover {
   padding: 0.5rem;
   border-radius: 5px;
   border: 1px solid #ccc;
+  font-size: 0.9rem;
 }
 
-#lang-toggle {
-  margin-left: 1rem;
+button {
   padding: 0.5rem 1rem;
   background-color: #d4b17f;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #c1a06f;
+  transform: scale(1.02);
 }
 
 .subhead {
-  padding-left: 2rem;
-  padding-bottom: 0;
+  padding: 1rem 2rem 0.5rem;
+  font-size: 1.8rem;
+  color: #3e2f1c;
 }
 
 .scroll-container {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
-  padding: 1rem ;
+  padding: 1rem;
   scroll-behavior: smooth;
 }
 
@@ -147,6 +138,11 @@ nav ul li a:hover {
   max-width: 250px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: scale(1.03);
 }
 
 .recipe-card img {
@@ -156,21 +152,14 @@ nav ul li a:hover {
 }
 
 .recipe-card h3 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.3rem;
+  margin: 0.5rem 0 0.3rem;
   font-size: 1.1rem;
   color: #3e2f1c;
 }
 
 .recipe-card p {
-  margin: 0;
   font-size: 0.95rem;
   color: #6c5c45;
-}
-
-.recipe-card:hover {
-  transform: scale(1.03);
-  transition: transform 0.2s ease;
 }
 
 .grid-container {
@@ -199,11 +188,17 @@ footer {
   text-decoration: none;
   color: #5a4b2f;
   font-weight: bold;
+  transition: color 0.2s ease;
 }
 
 .footer-links a:hover,
 .footer-social a:hover {
   color: #8b6f3e;
+}
+
+.footer-copy p {
+  font-size: 0.9rem;
+  color: #6c5c45;
 }
 
 .about-container {
@@ -215,8 +210,164 @@ footer {
   text-align: center;
 }
 
+.about-container h2 {
+  margin: 1.5rem 0 1rem;
+  color: #3e2f1c;
+}
+
 .about-container ul {
   list-style-position: inside;
   display: inline-block;
   text-align: left;
+  margin: 1rem 0;
+}
+
+.about-container a {
+  color: #8b6f3e;
+  text-decoration: none;
+}
+
+.about-container a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+  nav ul {
+    padding-left: 15%;
+    gap: 2rem;
+  }
+  
+  .recipe-card {
+    min-width: 220px;
+    max-width: 220px;
+  }
+  
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header h1 { font-size: 2.2rem; }
+  header p { font-size: 1.1rem; }
+  
+  nav { padding: 0.8rem; }
+  nav ul {
+    padding-left: 0;
+    gap: 1.5rem;
+  }
+  nav ul li a { font-size: 1.1rem; }
+  
+  .nav-right { gap: 0.3rem; }
+  .search-bar input { padding: 0.4rem; font-size: 0.9rem; }
+  
+  .subhead { padding-left: 1rem; font-size: 1.5rem; }
+  
+  .scroll-container { padding: 0.8rem; gap: 0.8rem; }
+  
+  .recipe-card {
+    min-width: 200px;
+    max-width: 200px;
+    padding: 0.8rem;
+  }
+  .recipe-card h3 { font-size: 1rem; }
+  .recipe-card p { font-size: 0.9rem; }
+  
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.8rem;
+    padding: 0.8rem;
+  }
+  
+  footer { padding: 1.2rem; }
+  .footer-links a, .footer-social a { margin: 0 0.3rem; font-size: 0.9rem; }
+  
+  .about-container { padding: 1.5rem 0.8rem; font-size: 1rem; }
+}
+
+@media screen and (max-width: 480px) {
+  header { padding: 1.5rem 0.5rem; }
+  header h1 { font-size: 1.8rem; }
+  header p { font-size: 1rem; }
+  
+  nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0.8rem 0.5rem;
+  }
+  .nav-left { order: 2; }
+  .nav-right {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+  }
+  nav ul li a { font-size: 1rem; }
+  
+  .search-bar input { width: 200px; padding: 0.5rem; }
+  
+  .subhead { padding-left: 0.5rem; font-size: 1.3rem; text-align: center; }
+  
+  .scroll-container { padding: 0.5rem; gap: 0.5rem; }
+  
+  .recipe-card {
+    min-width: 160px;
+    max-width: 160px;
+    padding: 0.6rem;
+  }
+  .recipe-card h3 { font-size: 0.9rem; margin-top: 0.4rem; }
+  .recipe-card p { font-size: 0.8rem; }
+  
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  footer { padding: 1rem 0.5rem; }
+  .footer-links, .footer-social { margin-bottom: 0.8rem; }
+  .footer-links a, .footer-social a { margin: 0 0.2rem; font-size: 0.8rem; }
+  .footer-copy p { font-size: 0.8rem; line-height: 1.4; }
+  
+  .about-container { padding: 1rem 0.5rem; font-size: 0.9rem; }
+  .about-container h2 { font-size: 1.2rem; }
+}
+
+@media screen and (max-width: 320px) {
+  header h1 { font-size: 1.5rem; }
+  header p { font-size: 0.9rem; }
+  
+  nav ul { gap: 0.8rem; }
+  nav ul li a { font-size: 0.9rem; }
+  
+  .search-bar input { width: 150px; font-size: 0.8rem; }
+  
+  .recipe-card {
+    min-width: 140px;
+    max-width: 140px;
+    padding: 0.5rem;
+  }
+  .recipe-card h3 { font-size: 0.8rem; }
+  .recipe-card p { font-size: 0.7rem; }
+  
+  .grid-container { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  
+  .footer-links a, .footer-social a { font-size: 0.7rem; }
+  .footer-copy p { font-size: 0.7rem; }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  header { padding: 1rem 0.5rem; }
+  header h1 { font-size: 1.5rem; }
+  header p { font-size: 0.9rem; }
+  
+  nav { padding: 0.5rem; }
+  .scroll-container { padding: 0.5rem; }
+  .recipe-card { min-width: 180px; max-width: 180px; }
 }
